@@ -105,27 +105,25 @@ img {
 .page-header__container {
     display: flex;
 }
-
-
-
-.list-nav {
-    display: flex;
-}
-
-.list-nav > li:not(:last-child) {
-margin-right: 50px;
-}
-.list-nav  .link {
-display: block;
-padding-top: 32px;
-padding-bottom: 32px;
-}
+    /*Навигация в шапке*/
 .site-nav {
     display: flex;
     align-items: center;
 }
+.site-nav__list {
+    display: flex;
+}
 
-.nav-studio,.nav-portfolio, .nav-body, .mail, .tel {
+.site-nav__item:not(:last-child) {
+margin-right: 50px;
+}
+.site-nav__link {
+display: block;
+padding-top: 32px;
+padding-bottom: 32px;
+}
+
+.site-nav__link, .header-contacts__link {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.14;
@@ -135,21 +133,19 @@ padding-bottom: 32px;
     transition: color var(--time) var(--timing);
 } 
 
-.nav-body:hover,
-.nav-bodt:focus,
-.nav-studio:hover,
-.nav-studio:focus,
-.nav-portfolio:hover,
-.nav-portfolio:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
     color: var(--accent-color);
 }
-.nav-portfolio,
-.nav-studio {
+.site-nav__current:hover,
+.site-nav__current:focus {
+    color: var(--nav-color);
+}
+.site-nav__current {
     position: relative;
     color: var(--accent-color);
 }
-.nav-studio::after,
-.nav-portfolio::after {
+.site-nav__current::after {
     position: absolute;
     bottom: 0;
     display: block;
@@ -160,46 +156,36 @@ padding-bottom: 32px;
     background-color: var(--accent-color);
 }
 
-.nav-studio:hover,
-.nav-studio:focus,
-.nav-portfolio:hover,
-.nav-portfolio:focus {
-    color: var(--nav-color);
-}
-
 /*Контакты*/
 .header-contacts {
     display: flex;
     margin-left: auto;
     align-items: center;
 }
-.header-contacts .item + .item {
+.header-contacts__item + .header-contacts__item {
     margin-left: 50px;
 }
-.header-contacts > .item > .link {
+.header-contacts__link {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 
-.mail, .tel {
+.header-contacts__link {
     color: var(--second-color);
 }
 
 
-.mail:hover,
-.mail:focus,
-.tel:hover,
-.tel:focus {
+.header-contacts__link:hover,
+.header-contacts__link:focus {
     color: var(--accent-color);
 }
-.header-icons {
+.header-contacts__icon {
     margin-right: 10px;
     fill: currentColor;
 }
 
-.mail,
-.tel {
+.header-contacts__link {
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
