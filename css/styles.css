@@ -72,7 +72,42 @@ img {
     max-width: 100%;
 }
 
+/*Логотип*/
+
+.page-header__logo {
+    margin-right: 93px;
+}
+
+.logo {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--main-color);
+}
+
+.logo__part {
+    color: var(--accent-color);
+}
+
+.footer__logo {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--white-color);
+}
+
 /*Шапка*/
+.page-header {
+    border-bottom: 1px solid var(--header-line);
+}
+.page-header__container {
+    display: flex;
+}
+
+
+
 .list-nav {
     display: flex;
 }
@@ -88,27 +123,6 @@ padding-bottom: 32px;
 .site-nav {
     display: flex;
     align-items: center;
-}
-.header-logo {
-    margin-right: 93px;
-}
-.header-container {
-    display: flex;
-}
-.page-header {
-    border-bottom: 1px solid var(--header-line);
-}
-
-.logo {
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    color: var(--main-color);
-}
-
-.logo-part {
-    color: var(--accent-color);
 }
 
 .nav-studio,.nav-portfolio, .nav-body, .mail, .tel {
@@ -500,13 +514,7 @@ background-image: url(../images/clock\ \(1\).svg);
     margin-bottom: 0;
 }
 
-.footer-logo {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 20px;
 
-    color: var(--white-color);
-}
 
 .footer-adress, 
 .footer-mail,
