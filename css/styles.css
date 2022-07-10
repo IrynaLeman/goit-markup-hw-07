@@ -375,30 +375,28 @@ background-image: url(../images/clock\ \(1\).svg);
     background-color: var(--buttom-bgr);
 }
 
-.staff-list {
+.team__list {
     display: flex;
     justify-content: space-between;
 }
 
-.staff-list>.card:not(:last-child) {
+.team__card:not(:last-child) {
     margin-right: 30px;
 }
 
-.staff-list>.card {
+.team__card {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--white-color);
 }
 
-.foto-staff {
+.team__foto {
     display: block;
     max-width: 100%;
-
     margin-bottom: 30px;
-
 }
 
-.staff {
+.team__person {
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -407,7 +405,7 @@ background-image: url(../images/clock\ \(1\).svg);
     text-align: center;
     color: var(--main-color);
 }
-.position {
+.team__position {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -415,14 +413,21 @@ background-image: url(../images/clock\ \(1\).svg);
     margin-bottom: 16px;
 }
 
-
-.icon-nets {
+.nets {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 30px;
+}
+.nets__icon {
     fill: currentColor;
 
     transition: color var(--time) var(--timing);
 }
 
-.nets-item>.link {
+.nets__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -435,21 +440,12 @@ background-image: url(../images/clock\ \(1\).svg);
     transition: background-color var(--time) var(--timing);
 }
 
-.nets-item>.link:hover,
-.nets-item>.link:focus {
+
+.nets__link:hover,
+.nets__link:focus {
     color: var(--white-color);
     background-color: var(--accent-color);
 }
-
-.social-nets {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding-left: 32px;
-    padding-right: 32px;
-    margin-bottom: 30px;
-}
-
 
 /*Наши клиенты*/
 
