@@ -214,7 +214,7 @@ padding-bottom: 32px;
     padding-bottom: 200px;
 }
 
-.hero-title {
+.hero__title {
     margin-top: 0;
     margin-bottom: 0;
     margin-bottom: 30px;
@@ -228,38 +228,37 @@ padding-bottom: 32px;
     text-transform: uppercase;
     color: var(--white-color);
 }
-
-
-.button-order {
+/*_button.scss*/
+.button {
     display: inline-block;
     border-radius: 4px;
-    padding: 10px 32px;
-    min-width: 200px;
-    text-align: center;
-    /*border: 1px solid transparent;*/
-
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--time) var(--timing), box-shadow var(--time) var(--timing);
     font-family: inherit;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.88;    
+    line-height: 1.88;
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--white-color);
     background-color: var(--accent-color);
+    cursor: pointer;
     border: none;
-    cursor:pointer;
-
-    transition: color var(--time) var(--timing), background-color var(--time) var(--timing);
 }
-.button-order:hover,
-.button-order:focus {
-    color: var(--main-color);
+.button:hover,
+.button:focus {
     background-color: var(--add-blue);
-    border: none;
 }
+
+.hero__button {
+    padding: 10px 32px;
+    min-width: 200px;
+    text-align: center;
+}
+
 
 /*секции*/
+/*_visually-hidden.scss*/
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -273,12 +272,7 @@ padding-bottom: 32px;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-/*.feature-title {
-    display: inline;
-    margin-top: 0;
-    margin-bottom: 0;
 
-    visibility: hidden};*/
 .feature-list>.item {
     width: 270px;
 }
@@ -935,45 +929,13 @@ background-image: url(../images/clock\ \(1\).svg);
     width: 16px;
     height: 15px;
 }
-/*
-.checkbox-icon {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    background-image: url(../images/icon-check.svg);
-    background-size: contain;
-    
-}
-.checkbox:checked + .checkbox-icon {
-    background-image: url(../images/icon-check-v.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--accent-color);
-}
-*/
-.button-submit {
-    display: block;
+
+.form__button {
     margin-left: auto;
     margin-right: auto;
     padding: 10px 55px 10px 56px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: var(--white-color);
-    background-color: var(--accent-color);
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
-    transition: background-color var(--time) var(--timing), box-shadow var(--time) var(--timing);
 }
-.button-submit:hover,
-.button-submit:focus {
-    background-color: var(--add-blue);
-}
+
 
 
 
