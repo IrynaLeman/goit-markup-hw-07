@@ -616,20 +616,18 @@ background-image: url(../images/clock\ \(1\).svg);
 /*ПОРТФОЛИО*/
 
 
-/*скрыли за счет класса visually-hidden
+/*Заголовок скрыли за счет класса visually-hidden
 .projects*/
-
-.portfolio__filter {
+/*Кнопки фильтра*/
+.filter {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
-.portfolio__filter>li:not(:last-child) {
+.filter__item:not(:last-child) {
     margin-right: 8px;
 }
-
-
-.filter {
+.filter__button {
     display: inline-block;
     border-radius: 4px;
     padding: 6px 22px;
@@ -647,14 +645,14 @@ background-image: url(../images/clock\ \(1\).svg);
 
     transition: color var(--time) var(--timing), background-color var(--time) var(--timing);
 }
-.filter:hover,
-.filter:focus {
+.filter__button:hover,
+.filter__button:focus {
     color: var(--white-color);
     background-color: var(--accent-color);
     border: none;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
+/*Сетка из карточек*/
 .cases {
     display: flex;
     flex-wrap: wrap;
