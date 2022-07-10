@@ -619,12 +619,12 @@ background-image: url(../images/clock\ \(1\).svg);
 /*скрыли за счет класса visually-hidden
 .projects*/
 
-.portfolio-filter {
+.portfolio__filter {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
-.portfolio-filter>li:not(:last-child) {
+.portfolio__filter>li:not(:last-child) {
     margin-right: 8px;
 }
 
@@ -727,6 +727,11 @@ background-image: url(../images/clock\ \(1\).svg);
 
 
 /*Модальное окно*/
+.backdrop.is-hidden {
+    /*visibility: hidden;*/
+    opacity: 0;
+    pointer-events: none;
+}
 .backdrop {
     opacity: 1;
     visibility: visible;
@@ -748,11 +753,10 @@ background-image: url(../images/clock\ \(1\).svg);
     transform: translate(-50%, -50%);
     
     padding: 40px;
-
     width: 528px;
     background-color: var(--white-color);
 }
-.button-close {
+.modal__close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -770,19 +774,13 @@ background-image: url(../images/clock\ \(1\).svg);
     color: var(--main-color);
     background-color: var(--white-color);
 }
-.button-close:hover {
+.modal__close:hover {
     color: var(--accent-color);
 }
-.close {
+.modal__icon {
     fill: currentColor;
 }
-.backdrop.is-hidden {
-    /*visibility: hidden;*/
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal-text {
+.modal__text {
     margin-bottom: 12px;
     text-align: center;
     font-weight: 700;
@@ -791,13 +789,16 @@ background-image: url(../images/clock\ \(1\).svg);
     letter-spacing: 0.03em;
     color: var(--nav-color);
     }
-.form-data {
+
+/*Форма модального окна*/
+.form {
     position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    color: var(--nav-color);
 }
-.label-name {
+.form__label {
     margin-bottom: 4px;
     color: var(--second-color);
     font-weight: 400;
@@ -805,7 +806,7 @@ background-image: url(../images/clock\ \(1\).svg);
     line-height: 1.17;
     letter-spacing: 0.01em;
     }
-.input-data {
+.form__input {
     width: 100%;
     padding: 11px 12px 11px 42px;
     font: inherit;
@@ -813,20 +814,17 @@ background-image: url(../images/clock\ \(1\).svg);
     border-radius: 4px; 
     transition: border-color 250ms var(--timing);
 }    
-.input-data:focus,
-.textarea:focus {
+.form__input:focus,
+.form__textarea:focus {
     outline: none;
     border: 1px solid var(--accent-color);
 }
 
-.form-data {
-    color: var(--nav-color);
-}
-.icon-position {
+/*.icon-position {
     position: relative;
     padding: 0;
-}
-.modal-form-icon {
+}*/
+.form__icon {
     position: absolute;
     bottom: 0;
     left: 12px;
@@ -834,22 +832,22 @@ background-image: url(../images/clock\ \(1\).svg);
 
     fill: currentColor
 }
-.form-data textarea::placeholder {
+.form__textarea::placeholder {
     font-family: 'Roboto';
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
-.form-data:focus-within > .modal-form-icon {
+.form:focus-within > .form__icon {
     color: var(--accent-color);
 }
-.label-name:focus-within>.input-data {
+.form__label:focus-within>.form__input {
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
 
-.textarea {
+.form__textarea {
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -857,19 +855,17 @@ background-image: url(../images/clock\ \(1\).svg);
     min-height: 120px;
     transition: border-color 250ms var(--timing);
 }
-.textarea:not(:placeholder-shown) {
+.form__textarea:not(:placeholder-shown) {
     border: 1px solid var(--accent-color);
 }
-.agreement {
 
+.agreement {
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
 }
-.taking {
-    padding-left: 23px;
-}
-.agree-label {
+
+.agreement__label {
     position: relative;
 
     margin-left: 7px;
@@ -878,12 +874,12 @@ background-image: url(../images/clock\ \(1\).svg);
     line-height: 1.71;
     color: var(--second-color);
 }
-.agreement-conditions {
+.agreement__link {
     margin-left: 7px;
     color: var(--accent-color);
 }
 
-.checkbox-icon {
+.agreement__icon {
     z-index: 1;
     color: var(--main-color);
     background-color: var(--white-color);
@@ -893,23 +889,26 @@ background-image: url(../images/clock\ \(1\).svg);
     width: 16px;
     height: 15px;
 }
-.icon-check {
+.agreement__icon--empty {
     fill: currentColor;
     background-color: var(--white-color);
 }
 
-.checkbox:checked + .checkbox-icon {
+.agreement__checkbox:checked + .agreement__icon {
     opacity: 0;
 }
-.checkbox-icon-blue {
+.agreement__icon--blue {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 16px;
     height: 15px;
 }
-
+.agreement__text {
+    padding-left: 23px;
+}
 .form__button {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 55px 10px 56px;
