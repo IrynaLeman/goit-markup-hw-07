@@ -449,7 +449,7 @@ background-image: url(../images/clock\ \(1\).svg);
 
 /*Наши клиенты*/
 
-.client-link {
+.clients__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,18 +460,18 @@ background-image: url(../images/clock\ \(1\).svg);
     border-radius: 4px;
     color: var(--nets-color);
 
-        transition: color var(--time) var(--timing), border-color var(--time) var(--timing);
+    transition: color var(--time) var(--timing), border-color var(--time) var(--timing);
 }
-.icon-client {
+.clients__icon {
     fill: currentColor;
 }
-.clients-list {
+.clients__list {
     display: flex;
     justify-content: space-between;
 
 }
-.client-link:hover,
-.client-link:focus {
+.clients__link:hover,
+.clients__link:focus {
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
