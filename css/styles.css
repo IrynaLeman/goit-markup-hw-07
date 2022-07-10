@@ -653,28 +653,31 @@ background-image: url(../images/clock\ \(1\).svg);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*Сетка из карточек*/
-.cases {
+.cards {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: -30px;
 }
 
-.cases>.item {
+.cards__item {
     flex-basis: calc(100%/3-60px);
     margin-right: 30px;
     margin-bottom: 30px;
 }
 
-.case {
+.card__link {
     transition: box-shadow var(--time) var(--timing);
 }
-.case:hover {
+.card__link:hover {
     display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-.case-title {
+.card__thumb {
+    position: relative;
+    overflow: hidden;
+}
+.card__title {
     margin-bottom: 4px;
 
     font-weight: 700;
@@ -684,29 +687,26 @@ background-image: url(../images/clock\ \(1\).svg);
     color: var(--nav-color);
 }
 
-.case-bottom {
+.card__bottom {
     padding: 20px 24px;
     border-left: 1px solid var(--card-border);
     border-bottom: 1px solid var(--card-border);
     border-right: 1px solid var(--card-border);
 }
 
-.filter-name {
+.card__direction {
     font-size: 16px;
     line-height: 1.88;
     color: var(--second-color);
 }
 
-.thumb-card {
-    position: relative;
-    overflow: hidden;
-}
-.case:hover .case-text {
+
+.card__link:hover .card__text {
     bottom: 0;
     left: 0;
     transform: translateY(0);
 }
-.case-text {
+.card__text {
 
     position: absolute;
     bottom: 0;
