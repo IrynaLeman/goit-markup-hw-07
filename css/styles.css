@@ -482,43 +482,47 @@ background-image: url(../images/clock\ \(1\).svg);
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
 
-.contact-list > li {
+.contacts__item:not(:last-child) {
     margin-bottom: 9px;
 }
-.contact-list > li:last-child {
+.contacts__item:last-child {
     margin-bottom: 0;
 }
 
-
-
-.footer-adress, 
-.footer-mail,
-.footer-tel {
+.contacts__adress, 
+.contacts__mail,
+.contacts__tel {
     font-family: inherit;
     font-style: normal;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-.contact-list > li:not(:last-child) {
-    margin-bottom: 9px;
-}
-.footer-adress {
+
+.contacts__adress {
     color: var(--white-color);
 
 }
-.footer-mail,
-.footer-tel {
+.contacts__mail,
+.contacts__tel {
     color: var(--white-alfa-color);
 
     transition: color var(--time) var(--timing);
 }
-.footer-mail:hover, .footer-mail:focus,
-.footer-tel:hover, .footer-tel:focus {
+.contacts__mail:hover, .contacts__mail:focus,
+.contacts__tel:hover, .contacts__tel:focus {
     color: var(--white-color);
 }
 
-.go {
+.slogan {
+    width: 206px;
+    margin-left: 70px;
+}
+.slogan__text {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -529,10 +533,12 @@ background-image: url(../images/clock\ \(1\).svg);
     color: var(--white-color);
     
 }
-.icon-footer-net {
-    fill: currentColor;
+.footer-nets {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
-.nets-footer>.link {
+.footer-nets__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -544,24 +550,15 @@ background-image: url(../images/clock\ \(1\).svg);
 
     transition: background-color var(--time) var(--timing);
 }
-.nets-footer>.link:hover,
-.nets-footer>.link:focus {
+.footer-nets__link:hover,
+.footer-nets__link:focus {
     color: var(--white-color);
     background-color: var(--accent-color);
 }
-.footer-social-nets {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+.footer-nets__icon {
+    fill: currentColor;
 }
-.lets-go {
-    width: 206px;
-    margin-left: 70px;
-}
-.footer-container {
-    display: flex;
-    align-items: baseline;
-}
+
 
 .footer-form {
     display: flex;
