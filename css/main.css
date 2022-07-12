@@ -257,4 +257,59 @@ img {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.features__icon {
+  width: 270px;
+}
+
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__icon:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features__text {
+  line-height: 1.71;
+  color: #757575;
+}
+
+.features__icon::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+}
+
+.features__icon--antenna::before {
+  background-image: url(../images/antenna\ \(1\).svg);
+}
+
+.features__icon--clock::before {
+  background-image: url(../images/clock\ \(1\).svg);
+}
+
+.features__icon--diagram::before {
+  background-image: url(../images/diagram\ \(1\).svg);
+}
+
+.features__icon--austronaut::before {
+  background-image: url(../images/astronaut\ \(1\).svg);
 }/*# sourceMappingURL=main.css.map */

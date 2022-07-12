@@ -1,10 +1,10 @@
 @import './utilits/vars';
-@import './utilits/common-styles';
+@import './components/common.scss';
 @import './components/logo';
 @import './components/header';
 @import './components/hero';
 @import './components/button';
 @import './components/visually-hidden';
-
+@import './components/features.scss';
 
 
