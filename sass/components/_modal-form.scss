@@ -4,15 +4,15 @@
     flex-direction: column;
     margin-bottom: 10px;
     color: $nav-color;
-}
 
-.form__label {
-    margin-bottom: 4px;
-    color: $second-color;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    &__label {
+        margin-bottom: 4px;
+        color: $second-color;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+    }
 }
 
 .form__input {
@@ -68,63 +68,62 @@
 .form__textarea:not(:placeholder-shown) {
     border: 1px solid $accent-color;
 }
-
-.agreement {
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.agreement__label {
-    position: relative;
-
-    margin-left: 7px;
-
-    font-size: 14px;
-    line-height: 1.71;
-    color: $second-color;
-}
-
-.agreement__link {
-    margin-left: 7px;
-    color: $accent-color;
-}
-
-.agreement__icon {
-    z-index: 1;
-    color: $main-color;
-    background-color: $white-color;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 15px;
-}
-
-.agreement__icon--empty {
-    fill: currentColor;
-    background-color: $white-color;
-}
-
-.agreement__checkbox:checked+.agreement__icon {
-    opacity: 0;
-}
-
-.agreement__icon--blue {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 15px;
-}
-
-.agreement__text {
-    padding-left: 23px;
-}
-
 .form__button {
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 55px 10px 56px;
 }
+.agreement {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__label {
+        position: relative;
+    
+        margin-left: 7px;
+        font-size: 14px;
+        line-height: 1.71;
+        color: $second-color;
+        }
+
+    &__link {
+        margin-left: 7px;
+        color: $accent-color;
+    }
+
+    &__icon {
+        z-index: 1;
+        color: $main-color;
+        background-color: $white-color;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 15px;
+    }
+
+    &__icon--empty {
+        fill: currentColor;
+        background-color: $white-color;
+    }
+
+    &__checkbox:checked+.agreement__icon {
+        opacity: 0;
+    }
+
+    &__icon--blue {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 15px;
+    }
+
+    &__text {
+        padding-left: 23px;
+    }
+}
+
+

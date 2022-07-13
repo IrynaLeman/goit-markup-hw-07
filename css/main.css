@@ -766,7 +766,6 @@ img {
   margin-bottom: 10px;
   color: #212121;
 }
-
 .form__label {
   margin-bottom: 4px;
   color: #757575;
@@ -872,12 +871,18 @@ img {
   border: 1px solid #2196F3;
 }
 
+.form__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px 10px 56px;
+}
+
 .agreement {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 }
-
 .agreement__label {
   position: relative;
   margin-left: 7px;
@@ -885,12 +890,10 @@ img {
   line-height: 1.71;
   color: #757575;
 }
-
 .agreement__link {
   margin-left: 7px;
   color: #2196F3;
 }
-
 .agreement__icon {
   z-index: 1;
   color: #000000;
@@ -902,16 +905,13 @@ img {
   width: 16px;
   height: 15px;
 }
-
 .agreement__icon--empty {
   fill: currentColor;
   background-color: #FFFFFF;
 }
-
 .agreement__checkbox:checked + .agreement__icon {
   opacity: 0;
 }
-
 .agreement__icon--blue {
   position: absolute;
   top: 50%;
@@ -920,14 +920,6 @@ img {
   width: 16px;
   height: 15px;
 }
-
 .agreement__text {
   padding-left: 23px;
-}
-
-.form__button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 55px 10px 56px;
 }/*# sourceMappingURL=main.css.map */
