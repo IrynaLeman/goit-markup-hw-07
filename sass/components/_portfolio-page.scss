@@ -43,7 +43,7 @@
 }
 
 .cards__item {
-    flex-basis: 370px;
+    flex-basis: calc((100%/3) - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
 }
